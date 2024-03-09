@@ -1,0 +1,134 @@
+/* index.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 18px;
+  }
+  
+  input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  button[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  p:last-of-type {
+    margin-bottom: 20px;
+  }
+  
+  /* Styling the player's hand */
+  form[action="http://127.0.0.1:5000/"] {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button[name="player_input"] {
+    background-color: #2196f3;
+    color: #fff;
+    font-size: 18px;
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[name="player_input"]:hover {
+    background-color: #1976d2;
+  }
+  
+  /* Styling the AI's played cards */
+  button[type="submit"] {
+    background-color: #f44336;
+    color: #fff;
+    font-size: 18px;
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #d32f2f;
+  }
+  
+  form[action="http://127.0.0.1:5000/"] {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Red button */
+  button[name="player_input"].red {
+    background-color: #f44336;
+  }
+  
+  /* Yellow button */
+  button[name="player_input"].yellow {
+    background-color: #ffeb3b;
+  }
+  
+  /* ... (more colors can be added similarly) ... */
+  
+  button[name="player_input"] {
+    color: #fff;
+    font-size: 18px;
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[name="player_input"]:hover {
+    opacity: 0.9;
+  }
+  

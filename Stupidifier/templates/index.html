@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stupidifier</title>
+    <link rel="stylesheet" href="static/index.css">
+    <link rel="stylesheet" href="static/index_text.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">The Stupidifier</h1>
+        <!-- Add the checkbox and label here -->
+        <form action="http://127.0.0.1:5000/" method="post">
+        
+            <label for="input-text">Enter your text and prepare to get "stupidified":</label>
+            <p>{{ suggestions }}</p>
+            <textarea id="input-text" name="input_text" rows="4" cols="50">{{ input_text }}</textarea>
+            
+            <button type="submit">Stupidify!</button>
+        </form>
+        {% if output_text %}
+        <div class="output-container">
+            <p>{{ output_text }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

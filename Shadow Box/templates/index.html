@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shadowboxing</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="static/style.css">
+    
+</head>
+<body>
+    <div class="container">
+    <div class = "center">
+    <h1>Welcome to Shadowboxing</h1>
+    <p>The rules are simple. All you have to do is guess a random direction, and the AI will also choose a random direction. If the AI guesses wrong, it becomes your turn. If the AI guesses correctly, it goes again. If it guesses right again, you lose.</p>
+    <p>If it is your turn and you guess the AI's move, you win a point. If it is the AI's turn and it guesses correctly, it wins a point. First one to two total points wins it all.</p>
+</div>
+
+    <form action="/" method="POST">
+        <select name="direction">
+            <option value="Left">Left</option>
+            <option value="Right">Right</option>
+            <option value="Up">Up</option>
+            <option value="Down">Down</option>
+        </select>
+        <br>
+        <button type="submit" name="Submit">Submit</button>
+    </form>
+    <div id="result">
+        {% if win_decision %}
+            <p class="winner-message">Winner: {{ win_decision }}</p>
+        {% else %}
+            <p class="turn-info">Current Turn: {{ turn1 }}</p>
+            <p class="turn-info">Current Round Winner: {{ turn2 }}</p>
+            <p class="turn-info">AI Move: {{ decision }}</p>
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>

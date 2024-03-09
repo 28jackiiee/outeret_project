@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="static/index.css">
+<head>
+    <title>Emoji Guessing Game</title>
+</head>
+<body>
+    <h1>Guess the Emoji!</h1>
+    <p>Choose the right emoji based on the clue.</p>
+    <div>
+        <p>Clue: {{ current_clue }}</p>
+        <p>Emoji: {{ current_emoji }}</p>
+        <form action="/" method="post">
+            <input type="text" name="user_guess" required>
+            <input type="hidden" name="correct_emoji" value="{{ correct_emoji }}">
+            <input type="hidden" name="current_emoji" value="{{ current_emoji }}">
+            <input type="hidden" name="current_clue" value="{{ current_clue }}">
+            <input type="submit" value="Submit">
+        </form>
+        {% if result %}
+            <p>{{ result }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
